@@ -29,13 +29,17 @@ def exportData():
 	
 	df.to_csv("data.csv",header=None)
 	
-def learnCharacter(text, binaryText):
-	
-
+def learnCharacter(text):#, binaryText):
+	for i in range(len(text)):
+		tempText = text[i-1]
+		#code = binaryText[i-]
+		if(dic.get(text[i-1]) == None):
+			dic.update({tempText: temp2})
+			
 	
 
 def main():
 	importData()
-	
+	learnCharacter('test')
 	exportData()
 main()
